@@ -1,0 +1,17 @@
+﻿@page
+@model CardGame.Pages.CreateCardsModel
+@{
+}
+<div style="margin-top:30px;">
+    <form method="post">
+        <div>Enter Cards:       <input asp-for="Cards" style="width:400px" /></div>
+        <div><input type="submit" /></div>
+    </form>
+    <br />
+    <p>Score: @Model.TotalPoints</p>
+    <br /> <br />
+    @if (!string.IsNullOrEmpty(@Model.ErrorMessage))
+    {
+        <p style="color:red">Error: @Model.ErrorMessage!</p>
+    }
+</div>
